@@ -1,7 +1,7 @@
-#### OrgUNETR
+### OrgUNETR
 
 This repository contains code for OrgUNETR.
-OrgUNETR, a segmentation model analyzing 3D CT scans, demonstrates the capacity to detecting organ and tumor simultaneously. OrgUNETR has two distinct output channels, one for the prediction of organ and the other for the prediction of tumor. Training without organ information fails to detect tumors. However, OrgUNETR trained with organ and tumor information successfully detects both organ and tumor.
+OrgUNETR, a segmentation model analyzing 3D CT scans, demonstrates the capacity to **detecting organ and tumor simultaneously**. OrgUNETR has two distinct output channels, one for the prediction of organ and the other for the prediction of tumor. Training without organ information fails to detect tumors. However, OrgUNETR trained with organ and tumor information successfully detects both organ and tumor.
 
 
 ### Dataset
@@ -15,7 +15,7 @@ The architecture of OrgUNETR is shown below. For details about OrgUNETR, please 
 
 ![image](https://github.com/ChoiSanghyukRoy/OrgUNETR/assets/148459212/5feba058-530e-4c0e-918b-f18cb9dcd762)
 
-OrgUNETR consists of two components which are patch embedding layer and Squeeze and Excitation Block(SEBlock). The patch embedding layer, which is typically used in vision models, compresses CT scan into certain dimension. We replaced transformer layer in UNETR to Squeeze and Excitation layer evaluating attention score between patch sequences while maintaining accuracy.
+OrgUNETR consists of two components which are patch embedding layer and **Squeeze and Excitation Block(SEBlock)**. The patch embedding layer, which is typically used in vision models, compresses CT scan into certain dimension. We replaced transformer layer in UNETR to Squeeze and Excitation layer evaluating attention score between patch sequences while maintaining accuracy.
 
 
 ## To run code,
