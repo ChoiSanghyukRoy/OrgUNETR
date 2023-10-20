@@ -13,7 +13,8 @@ We trained our model with KiTS2019 dataset containing CT scans. In the CT scan, 
 
 The architecture of OrgUNETR is shown below. For details about OrgUNETR, please have a look at our python code.
 
-![image](https://github.com/ChoiSanghyukRoy/OrgUNETR/assets/148459212/5feba058-530e-4c0e-918b-f18cb9dcd762)
+![OrgUNETR_figure](https://github.com/ChoiSanghyukRoy/OrgUNETR/assets/148459212/ef584108-ca9b-432f-ad1b-4ce9c0847e05)
+
 
 OrgUNETR consists of two components which are patch embedding layer and **Squeeze and Excitation Block(SEBlock)**. The patch embedding layer, which is typically used in vision models, compresses CT scan into certain dimension. We replaced transformer layer in UNETR to Squeeze and Excitation layer evaluating attention score between patch sequences while maintaining accuracy.
 
