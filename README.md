@@ -18,7 +18,7 @@ The architecture of OrgUNETR is shown below. For details about OrgUNETR, please 
 ![OrgUNETR_figure](https://github.com/ChoiSanghyukRoy/OrgUNETR/assets/148459212/ef584108-ca9b-432f-ad1b-4ce9c0847e05)
 
 
-OrgUNETR consists of two components which are patch embedding layer and **Squeeze and Excitation Block(SEBlock)**. The patch embedding layer, which is typically used in vision models, compresses CT scan into certain dimension. To efficiently enhance the UNETR architecture, we replaced transformer layer in UNETR to Squeeze and Excitation layer. Squeeze and Excitation layer contributes to reducing the number of parameters while maintaining accuracy.
+OrgUNETR consists of two components which are patch embedding layer and **Squeeze and Excitation Layer**. The patch embedding layer, which is typically used in vision models, compresses CT scan into certain dimension. To efficiently enhance the UNETR architecture, we replaced transformer layer in UNETR to Squeeze and Excitation layer. Squeeze and Excitation layer contributes to reducing the number of parameters while maintaining accuracy.
 
 
 
