@@ -1,4 +1,4 @@
-### OrgUNETR
+#### OrgUNETR
 
 This repository contains code for OrgUNETR.
 OrgUNETR, a segmentation model analyzing 3D CT scans, demonstrates the capacity to detecting organ and tumor simultaneously. OrgUNETR has two distinct output channels, one for the prediction of organ and the other for the prediction of tumor. Training without organ information fails to detect tumors. However, OrgUNETR trained with organ and tumor information successfully detects both organ and tumor.
