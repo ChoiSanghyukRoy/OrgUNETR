@@ -20,7 +20,7 @@ OrgUNETR consists of two components which are patch embedding layer and **Squeez
 
 
 ### To run code,
-The dataset path should be specified in line 108. The hyper-parameter of OrgUNETR can be modified in line 475.
+The dataset path should be specified in line 108. The hyper-parameter of OrgUNETR can be modified through line 475.
 
 
 ### Contact
