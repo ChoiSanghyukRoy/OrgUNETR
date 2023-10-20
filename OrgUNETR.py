@@ -79,8 +79,8 @@ test_ratio, val_ratio = 0.2, 0.05
 
 MODEL_SAVE = True
 if MODEL_SAVE:
-    model_dir1 = '/home/gail1/workspace/save_model/'
-    model_dir2 = 'results'
+    model_dir1 = ''
+    model_dir2 = ''
     MODEL_SAVE_PATH = os.path.join(model_dir1, model_dir2)
     os.makedirs(MODEL_SAVE_PATH, exist_ok=True)
     
@@ -105,7 +105,7 @@ if not USE_MY_DATA:
 
 else:
     # your dataset path
-    data_dir = '/home/gail1/CSH/dataset/kits2023/'
+    data_dir = ''
 
 
 
@@ -477,15 +477,11 @@ model = UNETR(img_shape=IMAGE_SIZE, input_dim=1, output_dim=4,
 model = model.to(DEVICE)
 model_summary(model, (1,*IMAGE_SIZE), device=DEVICE.type)
 
-
-
 torch.backends.cudnn.benchmark = True # ??
 
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-5*5)
 LossFunction = monai.losses.DiceLoss(include_background=False, to_onehot_y=False, softmax=True)
 MetricDice = monai.metrics.DiceMetric(include_background=False, reduction="mean")
-
-
 
 def BinaryOutput(output, keepdim=True):
     shape = output.shape
@@ -497,10 +493,7 @@ def BinaryOutput(output, keepdim=True):
         argmax_oh = argmax_oh.permute(0,4,1,2,3)
     elif len(shape) == 4:
         argmax_oh = argmax_oh.permute(0,3,1,2)
-    
     return argmax_oh
-
-print("done")
 
 def train(epoch, train_loader):
     mean_epoch_loss = 0
